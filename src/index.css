@@ -3,48 +3,48 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Arabic RTL Design System for LUXE ARYA */
+/* Luxurious Arabic RTL Design System for LUXE ARYA */
 
 @layer base {
   :root {
-    --background: 254 254 254;
-    --foreground: 10 10 10;
+    --background: 252 251 249;
+    --foreground: 28 25 23;
 
-    --card: 254 254 254;
-    --card-foreground: 10 10 10;
+    --card: 252 251 249;
+    --card-foreground: 28 25 23;
 
-    --popover: 254 254 254;
-    --popover-foreground: 10 10 10;
+    --popover: 252 251 249;
+    --popover-foreground: 28 25 23;
 
-    --primary: 10 10 10;
-    --primary-foreground: 254 254 254;
+    --primary: 168 85 247;
+    --primary-foreground: 252 251 249;
 
     --secondary: 245 243 240;
-    --secondary-foreground: 10 10 10;
+    --secondary-foreground: 28 25 23;
 
     --muted: 245 243 240;
-    --muted-foreground: 115 115 115;
+    --muted-foreground: 120 113 108;
 
-    --accent: 212 175 55;
-    --accent-foreground: 254 254 254;
+    --accent: 168 85 247;
+    --accent-foreground: 252 251 249;
 
     --destructive: 239 68 68;
-    --destructive-foreground: 254 254 254;
+    --destructive-foreground: 252 251 249;
 
-    --border: 232 228 223;
-    --input: 232 228 223;
-    --ring: 212 175 55;
+    --border: 231 229 228;
+    --input: 231 229 228;
+    --ring: 168 85 247;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 254 254 254;
-    --sidebar-foreground: 10 10 10;
-    --sidebar-primary: 10 10 10;
-    --sidebar-primary-foreground: 254 254 254;
+    --sidebar-background: 252 251 249;
+    --sidebar-foreground: 28 25 23;
+    --sidebar-primary: 168 85 247;
+    --sidebar-primary-foreground: 252 251 249;
     --sidebar-accent: 245 243 240;
-    --sidebar-accent-foreground: 10 10 10;
-    --sidebar-border: 232 228 223;
-    --sidebar-ring: 212 175 55;
+    --sidebar-accent-foreground: 28 25 23;
+    --sidebar-border: 231 229 228;
+    --sidebar-ring: 168 85 247;
   }
 }
 
@@ -81,12 +81,16 @@
   }
 
   /* Luxury Gradients */
-  .gradient-gold {
-    background: linear-gradient(135deg, #d4af37 0%, #f4e4a1 100%);
+  .gradient-rose-gold {
+    background: linear-gradient(135deg, #e8b4cb 0%, #f7d794 100%);
   }
 
   .gradient-luxury {
-    background: linear-gradient(135deg, #0a0a0a 0%, #2a2a2a 100%);
+    background: linear-gradient(135deg, #1c1917 0%, #44403c 100%);
+  }
+
+  .gradient-purple-luxury {
+    background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
   }
 
   /* Custom Animations */
@@ -96,19 +100,19 @@
 
   .hover-scale:hover {
     transform: scale(1.02);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(168, 85, 247, 0.1), 0 10px 10px -5px rgba(168, 85, 247, 0.04);
   }
 
-  /* Gold accents */
-  .border-gold {
-    border-color: #d4af37;
+  /* Luxury accents */
+  .border-rose-gold {
+    border-color: #e8b4cb;
   }
 
-  .text-gold {
-    color: #d4af37;
+  .text-rose-gold {
+    color: #e8b4cb;
   }
 
-  .bg-gold {
-    background-color: #d4af37;
+  .bg-rose-gold {
+    background-color: #e8b4cb;
   }
 }

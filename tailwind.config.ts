@@ -67,12 +67,23 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				luxury: {
-					black: '#0a0a0a',
-					gold: '#d4af37',
-					'gold-light': '#f4e4a1',
-					beige: '#f5f3f0',
-					'beige-dark': '#e8e4df',
-					white: '#fefefe',
+					// Sophisticated purples and roses for luxury feel
+					'deep-purple': '#6366f1',
+					'royal-purple': '#a855f7',
+					'rose-gold': '#e8b4cb',
+					'champagne': '#f7d794',
+					
+					// Refined neutrals
+					'charcoal': '#1c1917',
+					'warm-gray': '#78716c',
+					'pearl': '#faf7f5',
+					'cream': '#f5f3f0',
+					'ivory': '#fefdfb',
+					
+					// Accent colors
+					'blush': '#fda4af',
+					'lavender': '#c084fc',
+					'sage': '#86efac',
 				}
 			},
 			borderRadius: {
@@ -116,13 +127,25 @@ export default {
 						transform: 'scale(1)',
 						opacity: '1'
 					}
+				},
+				'luxury-glow': {
+					'0%': {
+						boxShadow: '0 0 5px rgba(168, 85, 247, 0.3)'
+					},
+					'50%': {
+						boxShadow: '0 0 20px rgba(168, 85, 247, 0.6)'
+					},
+					'100%': {
+						boxShadow: '0 0 5px rgba(168, 85, 247, 0.3)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.3s ease-out',
-				'scale-in': 'scale-in 0.2s ease-out'
+				'scale-in': 'scale-in 0.2s ease-out',
+				'luxury-glow': 'luxury-glow 2s ease-in-out infinite'
 			}
 		}
 	},

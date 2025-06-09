@@ -35,8 +35,9 @@ const menuItems = [
 ];
 
 const AdminSidebar = () => {
-  const { collapsed } = useSidebar();
+  const { state } = useSidebar();
   const location = useLocation();
+  const isCollapsed = state === 'collapsed';
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -46,19 +47,19 @@ const AdminSidebar = () => {
   };
 
   return (
-    <Sidebar className={collapsed ? "w-14" : "w-60"} collapsible>
+    <Sidebar side="right" className={isCollapsed ? "w-14" : "w-60"} collapsible="icon">
       {/* Logo */}
       <div className="p-4 border-b">
         <div className="text-xl font-bold arabic-heading text-center">
-          <span className="text-luxury-black">لكس</span>
-          <span className="text-gold mr-1">آريا</span>
+          <span className="text-luxury-charcoal">لكس</span>
+          <span className="text-luxury-rose-gold mr-1">آريا</span>
         </div>
-        {!collapsed && (
-          <p className="text-center text-sm text-gray-600 mt-1">لوحة الإدارة</p>
+        {!isCollapsed && (
+          <p className="text-center text-sm text-luxury-warm-gray mt-1">لوحة الإدارة</p>
         )}
       </div>
 
-      <SidebarTrigger className="m-2 self-end" />
+      <SidebarTrigger className="m-2 self-start" />
 
       <SidebarContent>
         <SidebarGroup>
@@ -72,12 +73,12 @@ const AdminSidebar = () => {
                       to={item.url} 
                       className={`flex items-center space-x-3 space-x-reverse ${
                         isActive(item.url) 
-                          ? 'bg-gold/10 text-gold font-medium' 
-                          : 'hover:bg-gray-100'
+                          ? 'bg-luxury-rose-gold/10 text-luxury-rose-gold font-medium' 
+                          : 'hover:bg-luxury-cream'
                       }`}
                     >
                       <item.icon className="h-4 w-4" />
-                      {!collapsed && <span>{item.title}</span>}
+                      {!isCollapsed && <span>{item.title}</span>}
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -93,7 +94,7 @@ const AdminSidebar = () => {
               <SidebarMenuItem>
                 <SidebarMenuButton onClick={handleLogout}>
                   <LogOut className="h-4 w-4" />
-                  {!collapsed && <span>تسجيل الخروج</span>}
+                  {!isCollapsed && <span>تسجيل الخروج</span>}
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
