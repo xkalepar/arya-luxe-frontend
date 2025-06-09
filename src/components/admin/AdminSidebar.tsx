@@ -49,13 +49,13 @@ const AdminSidebar = () => {
   return (
     <Sidebar side="right" className={isCollapsed ? "w-14" : "w-60"} collapsible="icon">
       {/* Logo */}
-      <div className="p-4 border-b">
+      <div className="p-4 border-b border-border">
         <div className="text-xl font-bold arabic-heading text-center">
-          <span className="text-luxury-charcoal">لكس</span>
-          <span className="text-luxury-rose-gold mr-1">آريا</span>
+          <span className="text-foreground">لكس</span>
+          <span className="text-luxury-rose-primary mr-1">آريا</span>
         </div>
         {!isCollapsed && (
-          <p className="text-center text-sm text-luxury-warm-gray mt-1">لوحة الإدارة</p>
+          <p className="text-center text-sm text-muted-foreground mt-1">لوحة الإدارة</p>
         )}
       </div>
 
@@ -73,8 +73,8 @@ const AdminSidebar = () => {
                       to={item.url} 
                       className={`flex items-center space-x-3 space-x-reverse ${
                         isActive(item.url) 
-                          ? 'bg-luxury-rose-gold/10 text-luxury-rose-gold font-medium' 
-                          : 'hover:bg-luxury-cream'
+                          ? 'bg-luxury-rose-primary/10 text-luxury-rose-primary font-medium' 
+                          : 'hover:bg-secondary'
                       }`}
                     >
                       <item.icon className="h-4 w-4" />

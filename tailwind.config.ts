@@ -67,23 +67,23 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				luxury: {
-					// Sophisticated purples and roses for luxury feel
-					'deep-purple': '#6366f1',
-					'royal-purple': '#a855f7',
-					'rose-gold': '#e8b4cb',
-					'champagne': '#f7d794',
+					// Rose-based luxury palette
+					'rose-deep': '#be123c',
+					'rose-primary': '#f43f5e',
+					'rose-light': '#fda4af',
+					'rose-soft': '#fecdd3',
 					
-					// Refined neutrals
-					'charcoal': '#1c1917',
-					'warm-gray': '#78716c',
-					'pearl': '#faf7f5',
-					'cream': '#f5f3f0',
-					'ivory': '#fefdfb',
+					// Dark luxury neutrals
+					'charcoal': '#0f0f0f',
+					'dark-gray': '#1a1a1a',
+					'medium-gray': '#2d2d2d',
+					'light-gray': '#a3a3a3',
+					'pearl': '#f5f5f5',
 					
 					// Accent colors
-					'blush': '#fda4af',
-					'lavender': '#c084fc',
-					'sage': '#86efac',
+					'pink': '#ec4899',
+					'purple': '#a855f7',
+					'emerald': '#10b981',
 				}
 			},
 			borderRadius: {
@@ -130,13 +130,24 @@ export default {
 				},
 				'luxury-glow': {
 					'0%': {
-						boxShadow: '0 0 5px rgba(168, 85, 247, 0.3)'
+						boxShadow: '0 0 5px rgba(244, 63, 94, 0.3)'
 					},
 					'50%': {
-						boxShadow: '0 0 20px rgba(168, 85, 247, 0.6)'
+						boxShadow: '0 0 20px rgba(244, 63, 94, 0.6)'
 					},
 					'100%': {
-						boxShadow: '0 0 5px rgba(168, 85, 247, 0.3)'
+						boxShadow: '0 0 5px rgba(244, 63, 94, 0.3)'
+					}
+				},
+				'rose-pulse': {
+					'0%': {
+						backgroundColor: 'rgba(244, 63, 94, 0.1)'
+					},
+					'50%': {
+						backgroundColor: 'rgba(244, 63, 94, 0.2)'
+					},
+					'100%': {
+						backgroundColor: 'rgba(244, 63, 94, 0.1)'
 					}
 				}
 			},
@@ -145,7 +156,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.3s ease-out',
 				'scale-in': 'scale-in 0.2s ease-out',
-				'luxury-glow': 'luxury-glow 2s ease-in-out infinite'
+				'luxury-glow': 'luxury-glow 2s ease-in-out infinite',
+				'rose-pulse': 'rose-pulse 2s ease-in-out infinite'
 			}
 		}
 	},
