@@ -22,7 +22,7 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="bg-card border-b border-border sticky top-0 z-50 backdrop-blur-sm">
+    <header className="bg-card border-b border-border sticky top-0 z-50 backdrop-blur-sm hidden md:block">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -34,7 +34,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8 space-x-reverse">
+          <nav className="flex items-center space-x-8 space-x-reverse">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -50,7 +50,7 @@ const Header = () => {
 
           {/* Actions */}
           <div className="flex items-center space-x-4 space-x-reverse">
-            <Link to="/admin" className="hidden md:block">
+            <Link to="/admin">
               <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary hover:bg-primary/10">
                 <User className="h-4 w-4 ml-2" />
                 الإدارة
@@ -68,47 +68,6 @@ const Header = () => {
                 )}
               </Button>
             </Link>
-
-            {/* Mobile Menu */}
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild className="md:hidden">
-                <Button variant="ghost" size="sm" className="text-muted-foreground">
-                  <Menu className="h-4 w-4" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-80 bg-card">
-                <div className="flex flex-col space-y-4 mt-8">
-                  <Link to="/" className="text-2xl font-bold arabic-heading text-center pb-4 border-b border-border">
-                    <span className="text-foreground">لكس</span>
-                    <span className="text-primary mr-1">آريا</span>
-                  </Link>
-                  
-                  {navigation.map((item) => (
-                    <Link
-                      key={item.name}
-                      to={item.href}
-                      onClick={() => setIsOpen(false)}
-                      className={`text-lg font-medium py-2 px-4 rounded-lg transition-all duration-300 ${
-                        isActive(item.href) 
-                          ? 'bg-primary/10 text-primary' 
-                          : 'text-muted-foreground hover:bg-secondary'
-                      }`}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                  
-                  <Link
-                    to="/admin"
-                    onClick={() => setIsOpen(false)}
-                    className="text-lg font-medium py-2 px-4 rounded-lg text-muted-foreground hover:bg-secondary border-t border-border pt-4 mt-4"
-                  >
-                    <User className="h-4 w-4 ml-2 inline" />
-                    لوحة الإدارة
-                  </Link>
-                </div>
-              </SheetContent>
-            </Sheet>
           </div>
         </div>
       </div>
