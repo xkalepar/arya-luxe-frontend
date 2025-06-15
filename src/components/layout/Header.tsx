@@ -29,7 +29,7 @@ const Header = () => {
           <Link to="/" className="flex items-center space-x-2 space-x-reverse">
             <div className="text-2xl font-bold arabic-heading">
               <span className="text-foreground">لكس</span>
-              <span className="text-luxury-rose-primary mr-1">آريا</span>
+              <span className="text-primary mr-1">آريا</span>
             </div>
           </Link>
 
@@ -39,8 +39,8 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-all duration-300 hover:text-luxury-rose-primary ${
-                  isActive(item.href) ? 'text-luxury-rose-primary font-semibold' : 'text-muted-foreground'
+                className={`text-sm font-medium transition-all duration-300 hover:text-primary ${
+                  isActive(item.href) ? 'text-primary font-semibold' : 'text-muted-foreground'
                 }`}
               >
                 {item.name}
@@ -51,18 +51,18 @@ const Header = () => {
           {/* Actions */}
           <div className="flex items-center space-x-4 space-x-reverse">
             <Link to="/admin" className="hidden md:block">
-              <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-luxury-rose-primary hover:bg-luxury-rose-primary/10">
+              <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary hover:bg-primary/10">
                 <User className="h-4 w-4 ml-2" />
                 الإدارة
               </Button>
             </Link>
             
             <Link to="/cart" className="relative">
-              <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-luxury-rose-primary hover:bg-luxury-rose-primary/10">
+              <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary hover:bg-primary/10">
                 <ShoppingBag className="h-4 w-4 ml-2" />
                 السلة
                 {state.itemCount > 0 && (
-                  <Badge className="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center p-0 bg-luxury-rose-primary text-white text-xs animate-luxury-glow">
+                  <Badge className="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center p-0 bg-primary text-primary-foreground text-xs animate-luxury-glow">
                     {state.itemCount}
                   </Badge>
                 )}
@@ -80,7 +80,7 @@ const Header = () => {
                 <div className="flex flex-col space-y-4 mt-8">
                   <Link to="/" className="text-2xl font-bold arabic-heading text-center pb-4 border-b border-border">
                     <span className="text-foreground">لكس</span>
-                    <span className="text-luxury-rose-primary mr-1">آريا</span>
+                    <span className="text-primary mr-1">آريا</span>
                   </Link>
                   
                   {navigation.map((item) => (
@@ -90,7 +90,7 @@ const Header = () => {
                       onClick={() => setIsOpen(false)}
                       className={`text-lg font-medium py-2 px-4 rounded-lg transition-all duration-300 ${
                         isActive(item.href) 
-                          ? 'bg-luxury-rose-primary/10 text-luxury-rose-primary' 
+                          ? 'bg-primary/10 text-primary' 
                           : 'text-muted-foreground hover:bg-secondary'
                       }`}
                     >
